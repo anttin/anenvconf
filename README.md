@@ -13,7 +13,7 @@ python3 -m pip install anenvconf
 Import the modules key classes, define the config schema and create a Config object with the schema.
 
 ```python
-from anconfig import Config, ConfigValueType
+from anenvconf import Config, ConfigValueType
 config_schema = {
   'jsonvar1': {
     'type': ConfigValueType.JSON,
@@ -34,13 +34,13 @@ config = None
 try:
   config = Config(config_schema)
 
-except anconfig.exceptions.InvalidValueException as e:
+except anenvconf.exceptions.InvalidValueException as e:
   print("Got an invalid value: ", e.text)
 
-except anconfig.exceptions.EnvironmentVarMissingException as e:
+except anenvconf.exceptions.EnvironmentVarMissingException as e:
   print("A required environment variable is missing: ", e.text)
 
-except anconfig.exceptions.RequiredVarMissingException as e:
+except anenvconf.exceptions.RequiredVarMissingException as e:
   print("A required value inside a variable is missing: ", e.text)
 
 

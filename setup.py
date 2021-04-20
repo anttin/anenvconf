@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
   name="anenvconf",
-  version="1.0.0",
+  version="1.0.1",
   author="anttin",
   author_email="muut.py@antion.fi",
   description="Module for defining a config schema and importing it from environment variables.",
