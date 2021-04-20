@@ -43,9 +43,8 @@ except anenvconf.exceptions.EnvironmentVarMissingException as e:
 except anenvconf.exceptions.RequiredVarMissingException as e:
   print("A required value inside a variable is missing: ", e.text)
 
-
 if config is not None:
-  print(config["stringvar2"])
+  print(config.get_value("stringvar2"))
 ```
 
 ## Schema
